@@ -17,7 +17,7 @@ Option 1 - Install on your machine
 
 2. Add image to installs directory.
 
-3. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges
+3. Run 'init.sh' file.
 
 5. Enjoy installed all in one OpenShift on your laptop.
 
