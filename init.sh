@@ -49,8 +49,8 @@ if [ -r $SRC_DIR/$ORIGIN_IMAGE ] || [ -L $SRC_DIR/$ORIGIN_IMAGE ]; then
 	echo Product image is present...
 	echo
 else
-	echo Need to download $ORIGIN_IMAGE package from the OpenShift Origin 
-	echo site at:
+	echo Need to download $ORIGIN_IMAGE package from
+	echo the OpenShift Origin site at:
 	echo
 	echo       https://www.openshift.org/vm
 	echo
