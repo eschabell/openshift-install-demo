@@ -15,12 +15,13 @@ Option 1 - Install on your machine
 ----------------------------------
 1. [Download and unzip.](https://github.com/eschabell/openshift-orign-demo/archive/master.zip)
 
-2. Add image to installs directory.
+2. Run 'init.sh' file.
 
-3. Run 'init.sh' file.
+3. Read and follow displayed instructions and enjoy OpenShift on your local machine!
 
-5. Enjoy installed all in one OpenShift on your laptop.
-
+Note: after a run of the demo installation, you will have a Vagrant enviornment installed
+based on openshift-install-demo. To re-run this demo install again, see output instructions
+to remove previous entries to avoid errors.
 
 Supporting Articles
 -------------------

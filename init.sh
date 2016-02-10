@@ -7,7 +7,6 @@ ORIGIN_HOME=./target
 SRC_DIR=./installs
 SUPPORT_DIR=./support
 PRJ_DIR=./projects
-ORIGIN_IMAGE=openshift3-1.1.1.box
 VAGRANT_FILE=Vagrantfile
 OC_LINUX=openshift-origin-client-tools-v1.1.1-e1d9873-linux-64bit.tar.gz
 OC_MAC=openshift-origin-client-tools-v1.1.1-e1d9873-mac.zip
@@ -44,21 +43,6 @@ command -v VirtualBox -h >/dev/null 2>&1 || { echo >&2 "VirtualBox is required b
 echo "VirtualBox is installed..."
 echo
 
-# make some checks first before proceeding.	
-if [ -r $SRC_DIR/$ORIGIN_IMAGE ] || [ -L $SRC_DIR/$ORIGIN_IMAGE ]; then
-	echo Product image is present...
-	echo
-else
-	echo Need to download $ORIGIN_IMAGE package from
-	echo the OpenShift Origin site at:
-	echo
-	echo       https://www.openshift.org/vm
-	echo
-	echo and place it in the $SRC_DIR directory 
-	echo
-	exit
-fi
-
 # Remove the old insallation, if it exists.
 if [ -x $ORIGIN_HOME ]; then
 	echo "  - removing existing installation..."
@@ -71,13 +55,7 @@ echo "Setting up installation now..."
 echo
 mkdir $ORIGIN_HOME
 
-echo "Install source image (be patient, big file!) now..."
-echo
-echo "  ...be patient, it's a big file to copy!"
-echo
-cp $SRC_DIR/$ORIGIN_IMAGE $ORIGIN_HOME
-
-echo "Install vagrant file now..."
+echo "Setup vagrant file..."
 echo
 cp $SUPPORT_DIR/$VAGRANT_FILE $ORIGIN_HOME
 
@@ -91,14 +69,60 @@ else
 fi
 
 echo
-echo "Start image from $ORIGIN_HOME with: "
+echo "Downloading and installing OpenShift via Vagrant...."
 echo
-echo "  $ vagrant up"
+echo "  ...be patient, it's a big file!"
 echo
-echo "Login to OpenShift setup at: "
+cd $ORIGIN_HOME
+vagrant up --provider=virtualbox
+
+if [ $? -ne 0 ]; then
+	echo
+	echo "Error occurred during installation of Vagrant enviornment..."
+	echo
+	echo "Most likely encountered a previously installed environment, you"
+	echo "first need to remove this by locating its ID here:"
+	echo
+	vagrant "global-status"
+	echo
+  echo "Now remove it with:"
+	echo
+	echo "  $ vagrant destroy [id]"
+	echo
+	echo "When this is done, re-try the openshift-install-demo installation."
+	echo
+	exit
+fi
+
 echo
-echo "   http://localhost:8443"
+echo "To use installed CLI tooling add the following to your path for access:" 
 echo
-echo "$DEMO Setup Complete."
+echo "  $ export PATH=\$PATH:`pwd`/bin"
+echo
+echo "==================================================================="
+echo "=                                                                 ="
+echo "= After adding to path, you can use 'oc' from CLI to login:       ="
+echo "=                                                                 ="
+echo "=  $ oc login https://10.2.2.2                                    ="
+echo "=                                                                 ="
+echo "=  Authentication required for https://10.2.2.2:8443 (openshift)  ="
+echo "=  Username: {insert-any-login-here}                              ="
+echo "=                                                                 ="
+echo "=  Login successful.                                              ="
+echo "=                                                                 ="
+echo "=  You don't have any projects. You can try to create a new       ="
+echo "=  project, by running:                                           ="
+echo "=                                                                 ="
+echo "=  $ oc new-project                                               ="
+echo "=                                                                 ="
+echo "==================================================================="
+echo
+echo "==================================================================="
+echo "=                                                                 ="
+echo "= Now login via browser to OpenShift: https://10.2.2.2:8443       ="
+echo "=                                                                 ="
+echo "= $DEMO Setup Complete.                      ="
+echo "=                                                                 ="
+echo "==================================================================="
 echo
 
