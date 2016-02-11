@@ -19,9 +19,10 @@ Option 1 - Install on your machine
 
 3. Read and follow displayed instructions and enjoy OpenShift on your local machine!
 
-Note: after a run of the demo installation, you will have a Vagrant enviornment installed
-based on openshift-install-demo. To re-run this demo install again, see output instructions
-to remove previous entries to avoid errors.
+Note: after a run of the demo installation, you will have an entry in both the Vagrant registry
+and the VirtualBox registry. If you re-run the demo install, we have placed error handling to clean
+it up before re-installing. Just watch the output for details.
+
 
 Supporting Articles
 -------------------
@@ -34,3 +35,8 @@ See the tagged releases for the following versions of the product:
 
 - v1.0 - based on Openshift Vagrant box 1.1.1.
 
+![OpenShiftOrigin](https://github.com/eschabell/openshift-install-demo/blob/master/docs/demo-images/openshift-origin.png?raw=true)
+
+![Install 1](https://github.com/eschabell/openshift-install-demo/blob/master/docs/demo-images/install-1.png?raw=true)
+
+![Install 2](https://github.com/eschabell/openshift-install-demo/blob/master/docs/demo-images/install-2.png?raw=true)

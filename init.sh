@@ -77,21 +77,23 @@ cd $ORIGIN_HOME
 vagrant up --provider=virtualbox
 
 if [ $? -ne 0 ]; then
+  echo
+  echo "Detected a previous installation of this demo..."
+  echo
+	echo "Cleaning out previous Vagrant entry (you have to manually verify this step):"
 	echo
-	echo "Error occurred during installation of Vagrant enviornment..."
+	vagrant destroy $(vagrant 'global-status' | grep 'openshift-install' | cut -d ' ' -f 1)
+
 	echo
-	echo "Most likely encountered a previously installed environment, you"
-	echo "first need to remove this by locating its ID here:"
+	echo "Cleaining out previous VirtualBox entry:"
 	echo
-	vagrant "global-status"
-	echo
-  echo "Now remove it with:"
-	echo
-	echo "  $ vagrant destroy [id]"
-	echo
-	echo "When this is done, re-try the openshift-install-demo installation."
-	echo
-	exit
+	vboxmanage controlvm 'origin-1.1.1' poweroff
+	vboxmanage unregistervm 'origin-1.1.1' --delete
+
+	echo 
+  echo "Cleanup done, re-trying the openshift-install-demo installation."
+  echo
+  vagrant up --provider=virtualbox
 fi
 
 echo
