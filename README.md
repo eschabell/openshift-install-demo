@@ -1,5 +1,5 @@
-OpenShift All-In-One Virtual Machine
-====================================
+OpenShift Install Demo for Private PaaS
+=======================================
 Get Origin Up and Running From the Comfort of Your Own Laptop
 
 This image is based off of OpenShift Origin and is a fully functioning OpenShift instance with an integrated Docker registry. The
