@@ -13,7 +13,7 @@ if you want to run more containers concurrently in your instance.
 
 Option 1 - Install on your machine
 ----------------------------------
-1. [Download and unzip.](https://github.com/eschabell/openshift-orign-demo/archive/master.zip)
+1. [Download and unzip.](https://github.com/eschabell/openshift-install-demo/archive/master.zip)
 
 2. Run 'init.sh' file.
 
