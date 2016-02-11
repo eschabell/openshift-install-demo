@@ -23,6 +23,9 @@ Note: after a run of the demo installation, you will have an entry in both the V
 and the VirtualBox registry. If you re-run the demo install, we have placed error handling to clean
 it up before re-installing. Just watch the output for details.
 
+The default installation used settings in Vagrant file for 8GB of memory, you can change this before
+running installation in support/Vagrantfile.
+
 
 Supporting Articles
 -------------------
