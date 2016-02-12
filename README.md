@@ -15,13 +15,15 @@ Option 1 - Install on your machine
 ----------------------------------
 1. [Download and unzip.](https://github.com/eschabell/openshift-install-demo/archive/master.zip)
 
-2. Run 'init.sh' file.
+2. Run 'init.sh' or 'init.bat' file.
 
 3. Read and follow displayed instructions and enjoy OpenShift on your local machine!
 
 Note: after a run of the demo installation, you will have an entry in both the Vagrant registry
 and the VirtualBox registry. If you re-run the demo install, we have placed error handling to clean
 it up before re-installing. Just watch the output for details.
+
+When running on Windows, Vagrant may fail retrieving the OpenShift origin box. If this occurs, you will need to download the Microsoft Visual C++ Redistribute Package. Click [here](https://www.microsoft.com/en-us/download/confirmation.aspx?id=8328) to download
 
 The default installation used settings in Vagrant file for 8GB of memory, you can change this before
 running installation in support/Vagrantfile.
