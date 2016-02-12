@@ -15,7 +15,7 @@ Option 1 - Install on your machine
 ----------------------------------
 1. [Download and unzip.](https://github.com/eschabell/openshift-install-demo/archive/master.zip)
 
-2. Run 'init.sh' or 'init.bat' file.
+2. Run 'init.sh' or 'init.bat' file. 'init.bat' must be run with Administrative privileges.
 
 3. Read and follow displayed instructions and enjoy OpenShift on your local machine!
 

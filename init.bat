@@ -3,7 +3,7 @@ setlocal
 
 set PROJECT_HOME=%~dp0
 set DEMO=OpenShift Origin Demo
-set AUTHORS=Eric D. Schabell, Andrew Block
+set AUTHORS=Andrew Block, Eric D. Schabell
 set PROJECT=git@github.com:eschabell/openshift-origin-demo.git
 set PRODUCT=OpenShift Origin Image
 set VERSION=6.2

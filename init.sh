@@ -1,6 +1,6 @@
 #!/bin/sh 
 DEMO="OpenShift Origin Demo"
-AUTHORS="Eric D. Schabell"
+AUTHORS="Andrew Block, Eric D. Schabell"
 PROJECT="git@github.com:eschabell/openshift-origin-demo.git"
 PRODUCT="OpenShift Origin Image"
 ORIGIN_HOME=./target
@@ -28,7 +28,7 @@ echo "##   #   # #     #     #  ##     # #   #   #   #       #     ##"
 echo "##    ###  #     ####  #   # ####  #   # ##### #       #     ##"
 echo "##                                                           ##"   
 echo "##                                                           ##"   
-echo "##  brought to you by, ${AUTHORS}                      ##"
+echo "##  brought to you by, ${AUTHORS}        ##"
 echo "##                                                           ##"   
 echo "##  ${PROJECT}       ##"
 echo "##                                                           ##"   
