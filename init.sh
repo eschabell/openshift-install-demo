@@ -65,7 +65,7 @@ mkdir $ORIGIN_HOME/bin
 if [[ `uname` == 'Darwin' ]]; then
 	unzip -q $SUPPORT_DIR/$OC_MAC -d $ORIGIN_HOME/bin
 else 
-  tar -zvf $SUPPORT_DIR/$OC_LINUX -d $ORIGN_HOME/bin
+  tar -zvf $SUPPORT_DIR/$OC_LINUX -d $ORIGIN_HOME/bin
 fi
 
 echo
