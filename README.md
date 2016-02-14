@@ -31,7 +31,7 @@ running installation in support/Vagrantfile.
 
 Supporting Articles
 -------------------
-- coming soon...
+- [How to install OpenShift as your private PaaS](http://www.schabell.org/2016/02/howto-install-openshift-private-paas.html)
 
 
 Released versions
