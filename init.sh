@@ -1,8 +1,7 @@
 #!/bin/sh 
-DEMO="OpenShift Origin Demo"
+DEMO="OpenShift Install Demo"
 AUTHORS="Andrew Block, Eric D. Schabell"
-PROJECT="git@github.com:eschabell/openshift-origin-demo.git"
-PRODUCT="OpenShift Origin Image"
+PROJECT="git@github.com:eschabell/openshift-install-demo.git"
 ORIGIN_HOME=./target
 SRC_DIR=./installs
 SUPPORT_DIR=./support
@@ -18,7 +17,7 @@ clear
 echo
 echo "###############################################################"
 echo "##                                                           ##"   
-echo "##  Setting up the ${DEMO}                     ##"
+echo "##  Setting up the ${DEMO}                    ##"
 echo "##                                                           ##"   
 echo "##                                                           ##"   
 echo "##    ###  ####  ##### #   #  #### #   # ##### ##### #####   ##"
@@ -30,7 +29,7 @@ echo "##                                                           ##"
 echo "##                                                           ##"   
 echo "##  brought to you by, ${AUTHORS}        ##"
 echo "##                                                           ##"   
-echo "##  ${PROJECT}       ##"
+echo "##  ${PROJECT}      ##"
 echo "##                                                           ##"   
 echo "###############################################################"
 echo

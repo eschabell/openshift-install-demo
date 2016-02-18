@@ -2,10 +2,9 @@
 setlocal
 
 set PROJECT_HOME=%~dp0
-set DEMO=OpenShift Origin Demo
+set DEMO=OpenShift Install Demo
 set AUTHORS=Andrew Block, Eric D. Schabell
-set PROJECT=git@github.com:eschabell/openshift-origin-demo.git
-set PRODUCT=OpenShift Origin Image
+set PROJECT=git@github.com:eschabell/openshift-install-demo.git
 set VERSION=6.2
 set ORIGIN_HOME=%PROJECT_HOME%target
 set SRC_DIR=%PROJECT_HOME%installs
@@ -23,7 +22,7 @@ cls
 echo.
 echo ###############################################################
 echo ##                                                           ##
-echo ##  Setting up the %DEMO%                     ##
+echo ##  Setting up the %DEMO%                    ##
 echo ##                                                           ##
 echo ##                                                           ##
 echo ##    ###  ####  ##### #   #  #### #   # ##### ##### #####   ##
@@ -35,7 +34,7 @@ echo ##                                                           ##
 echo ##                                                           ##
 echo ##  brought to you by, %AUTHORS%        ##
 echo ##                                                           ##
-echo ##  %PROJECT%    ##
+echo ##  %PROJECT%   ##
 echo ##                                                           ##
 echo ###############################################################
 echo.
