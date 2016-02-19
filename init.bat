@@ -70,8 +70,8 @@ echo.
 xcopy /Y /Q "%SUPPORT_DIR%\%VAGRANT_FILE%" "%ORIGIN_HOME%\"
 
 echo Setting up OpenShift commandline tools...
-mkdir "%ORIGIN_HOME%/bin"
-cscript /nologo "%SUPPORT_DIR%/windows/unzip.vbs" %SUPPORT_DIR%\%OC_WINDOWS% "%ORIGIN_HOME%"
+mkdir "%ORIGIN_HOME%\bin"
+cscript /nologo "%SUPPORT_DIR%\windows\unzip.vbs" %SUPPORT_DIR%\%OC_WINDOWS% "%ORIGIN_HOME%"
 
 echo.
 echo Downloading and installing OpenShift via Vagrant....
