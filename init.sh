@@ -5,7 +5,6 @@ PROJECT="git@github.com:eschabell/openshift-install-demo.git"
 ORIGIN_HOME=./target
 SRC_DIR=./installs
 SUPPORT_DIR=./support
-PRJ_DIR=./projects
 VAGRANT_FILE=Vagrantfile
 OC_LINUX=openshift-origin-client-tools-v1.1.1-e1d9873-linux-64bit.tar.gz
 OC_MAC=openshift-origin-client-tools-v1.1.1-e1d9873-mac.zip
@@ -52,11 +51,11 @@ fi
 # Run installation.
 echo "Setting up installation now..."
 echo
-mkdir $ORIGIN_HOME
+mkdir -p $ORIGIN_HOME/openshift
 
 echo "Setup vagrant file..."
 echo
-cp $SUPPORT_DIR/$VAGRANT_FILE $ORIGIN_HOME
+cp $SUPPORT_DIR/$VAGRANT_FILE $ORIGIN_HOME/openshift
 
 echo "Setting up OpenShift commandline tools..."
 mkdir $ORIGIN_HOME/bin
@@ -72,7 +71,7 @@ echo "Downloading and installing OpenShift via Vagrant...."
 echo
 echo "  ...be patient, it's a big file!"
 echo
-cd $ORIGIN_HOME
+cd $ORIGIN_HOME/openshift
 vagrant up --provider=virtualbox
 
 if [ $? -ne 0 ]; then

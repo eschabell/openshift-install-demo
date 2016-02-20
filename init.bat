@@ -10,7 +10,6 @@ set ORIGIN_HOME=%PROJECT_HOME%target
 set SRC_DIR=%PROJECT_HOME%installs
 set SUPPORT_DIR=%PROJECT_HOME%support
 set VAGRANT_FILE=Vagrantfile
-set PRJ_DIR=%PROJECT_HOME%projects
 set OC_WINDOWS=openshift-origin-client-tools-v1.1.1-e1d9873-windows.zip
 set VERSION=1.1.1
 set ORIGIN_VAGRANT_BOX=thesteve0/openshift-origin
@@ -64,21 +63,22 @@ REM Run installation.
 echo Setting up installation now...
 echo.
 mkdir "%ORIGIN_HOME%"
+mkdir "%ORIGIN_HOME%\openshift"
 
 echo Setup vagrant file...
 echo.
-xcopy /Y /Q "%SUPPORT_DIR%\%VAGRANT_FILE%" "%ORIGIN_HOME%\"
+xcopy /Y /Q "%SUPPORT_DIR%\%VAGRANT_FILE%" "%ORIGIN_HOME%\openshift\"
 
 echo Setting up OpenShift commandline tools...
 mkdir "%ORIGIN_HOME%\bin"
-cscript /nologo "%SUPPORT_DIR%\windows\unzip.vbs" %SUPPORT_DIR%\%OC_WINDOWS% "%ORIGIN_HOME%"
+cscript /nologo "%SUPPORT_DIR%\windows\unzip.vbs" %SUPPORT_DIR%\%OC_WINDOWS% "%ORIGIN_HOME%\openshift\"
 
 echo.
 echo Downloading and installing OpenShift via Vagrant....
 echo.
 echo  ...be patient, it's a big file!
 echo.
-cd "%ORIGIN_HOME%"
+cd "%ORIGIN_HOME%\openshift"
 call vagrant up --provider=virtualbox
 
 if %ERRORLEVEL% NEQ 0 (
