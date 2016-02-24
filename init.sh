@@ -58,12 +58,12 @@ echo
 cp $SUPPORT_DIR/$VAGRANT_FILE $ORIGIN_HOME/openshift
 
 echo "Setting up OpenShift commandline tools..."
-mkdir $ORIGIN_HOME/bin
+mkdir -p $ORIGIN_HOME/openshift/bin
 
 if [[ `uname` == 'Darwin' ]]; then
-	unzip -q $SUPPORT_DIR/$OC_MAC -d $ORIGIN_HOME/bin
+	unzip -q $SUPPORT_DIR/$OC_MAC -d $ORIGIN_HOME/openshift/bin
 else 
-  tar -zvf $SUPPORT_DIR/$OC_LINUX -d $ORIGIN_HOME/bin
+  tar -zvf $SUPPORT_DIR/$OC_LINUX -d $ORIGIN_HOME/openshift/bin
 fi
 
 echo

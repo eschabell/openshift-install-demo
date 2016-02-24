@@ -64,14 +64,14 @@ echo Setting up installation now...
 echo.
 mkdir "%ORIGIN_HOME%"
 mkdir "%ORIGIN_HOME%\openshift"
+mkdir "%ORIGIN_HOME%\openshift\bin"
 
 echo Setup vagrant file...
 echo.
 xcopy /Y /Q "%SUPPORT_DIR%\%VAGRANT_FILE%" "%ORIGIN_HOME%\openshift\"
 
 echo Setting up OpenShift commandline tools...
-mkdir "%ORIGIN_HOME%\bin"
-cscript /nologo "%SUPPORT_DIR%\windows\unzip.vbs" %SUPPORT_DIR%\%OC_WINDOWS% "%ORIGIN_HOME%\openshift\"
+cscript /nologo "%SUPPORT_DIR%\windows\unzip.vbs" %SUPPORT_DIR%\%OC_WINDOWS% "%ORIGIN_HOME%\openshift\bin\"
 
 echo.
 echo Downloading and installing OpenShift via Vagrant....
