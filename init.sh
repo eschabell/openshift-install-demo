@@ -125,7 +125,7 @@ echo "= To stop this demo use the following command:                    ="
 echo "=                                                                 ="
 echo "=  $ vagrant halt                                                 ="
 echo "=                                                                 ="
-echo "= $DEMO Setup Complete.                           ="
+echo "= $DEMO Setup Complete.                            ="
 echo "=                                                                 ="
 echo "==================================================================="
 echo
