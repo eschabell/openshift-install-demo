@@ -44,7 +44,7 @@ See the tagged releases for the following versions of the product:
 
 - v1.0 - based on Openshift Vagrant box 1.1.1.
 
-![InstallVideo](https://github.com/eschabell/openshift-install-demo/blob/master/docs/demo-images/install-video.png?raw=true)
+[![InstallVideo](https://github.com/eschabell/openshift-install-demo/blob/master/docs/demo-images/install-video.png?raw=true)](https://vimeo.com/ericschabell/openshift-install-demo)
 
 ![OpenShiftOrigin](https://github.com/eschabell/openshift-install-demo/blob/master/docs/demo-images/openshift-origin.png?raw=true)
 
