@@ -31,6 +31,8 @@ running installation in support/Vagrantfile.
 
 Supporting Articles
 -------------------
+- [Install OpenShift as your private PaaS](http://www.schabell.org/2016/02/install-openshift-private-paas-video.html)
+
 - [How to install OpenShift as your private PaaS](http://www.schabell.org/2016/02/howto-install-openshift-private-paas.html)
 
 
@@ -42,8 +44,7 @@ See the tagged releases for the following versions of the product:
 
 - v1.0 - based on Openshift Vagrant box 1.1.1.
 
+![InstallVideo](https://github.com/eschabell/openshift-install-demo/blob/master/docs/demo-images/install-video.png?raw=true)
+
 ![OpenShiftOrigin](https://github.com/eschabell/openshift-install-demo/blob/master/docs/demo-images/openshift-origin.png?raw=true)
 
-![Install 1](https://github.com/eschabell/openshift-install-demo/blob/master/docs/demo-images/install-1.png?raw=true)
-
-![Install 2](https://github.com/eschabell/openshift-install-demo/blob/master/docs/demo-images/install-2.png?raw=true)
