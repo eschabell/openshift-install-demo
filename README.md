@@ -40,6 +40,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v1.2 - based on Openshift Vagrant box 1.1.2.
+
 - v1.1 - based on Openshift Vagrant box 1.1.1 and Windows installation.
 
 - v1.0 - based on Openshift Vagrant box 1.1.1.
