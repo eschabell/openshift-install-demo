@@ -1,3 +1,6 @@
+Update: June 2018 moved to [Gitlab](https://gitlab.com/eschabell/openshift-install-demo)
+
+
 OpenShift Install Demo for Private PaaS
 =======================================
 Get Origin Up and Running From the Comfort of Your Own Laptop
